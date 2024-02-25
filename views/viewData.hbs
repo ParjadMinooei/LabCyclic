@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    
+    <title>Web322 Assignment#1</title>
+</head>
+<body>
+    <form method="post" action="/">
+        <h1>Beautiful Places Gallery</h1>
+        <div id="selection">
+            {{#each imageList}}
+            <input type="radio" name="images" value="[{{@index}}]" id="{{this.name}}"> <label for={{this.name}}>{{this.name}}</label><br>
+			{{/each}}
+            <button id="button">Submit</button>
+        </div>
+    
+    <div id="gallery">
+        
+        <img id="image" src="{{data1.number1}}" onerror="this.onerror=null;this.src='./images/xxxx.png';" height="300" width="300">
+        <div id="pick">
+           {{data2.number2}}
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>
